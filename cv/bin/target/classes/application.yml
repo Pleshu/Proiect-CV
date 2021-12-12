@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: 12345
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+
+
+
+application-description: CV Alex
+application-version: 0.0.1-SNAPSHOT
+
+management:
+  server:
+    port: 8081
+
+logging:
+  level:
+    org:
+      springframework:
+        security: error
+        boot:
+          autoconfigure: trace
+
+      hibernate:
+        SQL: trace
